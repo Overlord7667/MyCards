@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:backgroundTint="@color/backgroundColor"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="0dp"
+    android:id="@+id/cardView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardBackgroundColor"
+        android:backgroundTint="@color/white">
+
+
+        <ImageView
+            android:id="@+id/imageID"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_splash"
+            android:layout_alignParentRight="true" />
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/backgroundColor"
+            android:layout_below="@+id/imageID"/>
+
+        <TextView
+            android:id="@+id/nameCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/segoe"
+            android:text="У тебя может получиться"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/quantityPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/segoe"
+            android:text="200"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/separator"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/segoe"
+            android:text="балла"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            android:layout_toRightOf="@+id/quantityPoints"
+            android:layout_below="@+id/separator"
+            android:layout_marginTop="18dp"/>
+
+        <TextView
+            android:id="@+id/cashBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/segoe"
+            android:text="Кэшбэк"
+            android:textColor="@color/textColor"
+            android:textSize="12sp"
+            android:layout_below="@+id/quantityPoints"
+            android:layout_marginStart="12dp"/>
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="34dp"
+            android:fontFamily="@font/segoe"
+            android:text="Уровень"
+            android:textColor="@color/textColor"
+            android:textSize="12sp"
+            android:layout_below="@+id/quantityPoints"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/cashBack"/>
+
+        <TextView
+            android:id="@+id/cashBackProcent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="1%"
+            android:layout_below="@+id/cashBack"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/levelPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Базовый уровень тест"
+            android:layout_below="@+id/level"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/cashBackProcent"
+            android:layout_marginStart="59dp"
+            android:textColor="@color/black"/>
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/backgroundColor"
+            android:layout_below="@+id/levelPerson"/>
+
+        <ImageButton
+            android:id="@+id/eyeBTN"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/separator2"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_eye_2" />
+
+        <ImageButton
+            android:id="@+id/trashBTN"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/separator2"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/eyeBTN"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_trash2" />
+
+        <Button
+            android:id="@+id/infoBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/separator2"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/trashBTN"
+            android:backgroundTint="@color/backgroundColor"
+            android:text="Подробнее"
+            android:textColor="@color/mainColor"
+            app:cornerRadius="10dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
